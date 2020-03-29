@@ -1,2 +1,2 @@
-# Kanedaron Library
+# Library
 This is a custom library for personal use.
