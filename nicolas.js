@@ -53,12 +53,13 @@
 
 
 
-// function to escape all problematic characters from a Regex
-RegExp.escape = function(s) {
+// function to escape all problematic characters from a Regex, when i can put the name as RegExp.escape,
+// and export it as : export const RegExp to check if merging into RegExp standard object works
+escape = function(s) {
     return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 };
 
 
 
 
-export RegExp.escape
+export {escape}
