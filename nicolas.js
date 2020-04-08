@@ -46,3 +46,19 @@
 // ##III TRANSPORT (export something imported)
 // export something from 'someModule.js'
 // export default from 'someModuleWithDefault.js'
+
+
+
+// Function to extract emails from webpages
+
+
+
+// function to escape all problematic characters from a Regex
+regex.escapechar = function(s) {
+    return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+};
+
+
+
+
+export regex.escapechar
