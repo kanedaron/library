@@ -54,11 +54,11 @@
 
 
 // function to escape all problematic characters from a Regex
-regex.escapechar = function(s) {
+RegExp.escape = function(s) {
     return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 };
 
 
 
 
-export regex.escapechar
+export RegExp.escape
