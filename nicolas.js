@@ -52,14 +52,29 @@
 // Function to extract emails from webpages
 
 
-
+// # REGEX object
+const Regex = {}
 // function to escape all problematic characters from a Regex, when i can put the name as RegExp.escape,
 // and export it as : export const RegExp to check if merging into RegExp standard object works
-escape = function(s) {
+Regex.escape = function(s) {
     return s.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
 };
+// function to test if user input is correct, to prevent server crashing errors and malicious attacks
+// To test, just one rule : ENCLOSE REGEX IN ^ AND $, as in /^whatEntireInputShouldLookLike$/
+
+// example 1 to test molecule input as in : Fe3C5H6O5
+const formule = "Fe3C5H6O5"
+Regex.molecle = /^(([A-Z]{1}[a-z]*)\d*)*$/
+// if (!regexMolecule.test(formule)) return "incorrect input"
+
+// example 2 to test web links
+const webLink = "https://www.obama.com"
+Regex.web = /^(?:http(?:s)?\:\/\/)?(?:www.)?(\w+)+((?:.com)|(?:.org)|(?:.net))((?:\/\w+)*)(?:\/)?$/
+// if (!regexWeb.test(webLink)) return "incorrect input"
+// the regexHref also captures A/the domain name B/ the domain extension C/ the full path
 
 
 
 
-export {escape}
+
+export {Regex}
